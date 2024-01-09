@@ -102,4 +102,14 @@ def chiefs_posession():
         print("Now it's your turn! Go get some points...\n")
         giants_possession()
 
+"""
+Function when the Giants (The User) is in possession of the ball with random starting position and yard line. 
+"""
+def giants_possession():
+    yard_line = random.randint(1, 50)
+    starting_position = random.choice(["own", "opponents"])
+
+    print(f"You start at your {starting_position} {yard_line} Yard line!")
+    #choose play function here!!!
+
 welcome()
