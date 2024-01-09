@@ -22,7 +22,8 @@ def user_choice_welcome():
 
     if user_choice_welcome_input == "1":
         print("Let the games begin...")
-        #Add function for game start here!
+        time.sleep(2)
+        start_game_with_cointoss()
     elif user_choice_welcome_input == "2":
         print("Here are the rules...")
         time.sleep(2)
