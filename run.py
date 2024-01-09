@@ -1,3 +1,5 @@
+import random
+
 """
 Start of the game function
 """
