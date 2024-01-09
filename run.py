@@ -110,6 +110,69 @@ def giants_possession():
     starting_position = random.choice(["own", "opponents"])
 
     print(f"You start at your {starting_position} {yard_line} Yard line!")
-    #choose play function here!!!
+    giants_posession_choose_play()
+
+"""
+Function for user to decide what play to be played.
+"""
+def giants_posession_choose_play():
+    print("\nWhich play do you choose?")
+    print("1. Long Pass to WR")
+    print("2. Short Pass to WR")
+    print("3. Short Pass to TE")
+
+    qb_choice = input("Your choice (1/2/3): ")
+    
+    if qb_choice == "1":
+        if random.random() < 0.5:
+            print("Congrats! You've scored a TOUCHDOWN!")
+            print("Take a breather while the Chiefs are on offense...\n")
+            # Funktion für +7 Punkte einfügen 
+            chiefs_posession()
+        elif random.random() < 0.5:
+            print("Completion! You achieved a new first down and move further down the field!")
+            # Funktion für weiteren Ballbesitz weiter unten des Feldes
+        elif random.random() < 0.5:
+            print("Incomplete pass! The Chiefs defense has blocked your pass!")
+            # Funktion für 2,3,4 & 10 - STOP wenn nach 4&10 immernoch nicht weiter gekommen ist
+        else:
+            print("OH NOOOO! You're pass has been intercepted! Now the Chiefs have the ball!")
+            print("Keep ypur head up! Take a breather and come back stronger after their posession!")
+            chiefs_posession()
+    elif qb_choice == "2":
+        if random.random() < 0.3:
+            print("Congrats! You've scored a TOUCHDOWN!")
+            print("Take a breather while the Chiefs are on offense...\n")
+            # Funktion für +7 Punkte einfügen 
+            chiefs_posession()
+        elif random.random() < 0.9:
+            print("Completion! You achieved a new first down and move further down the field!")
+            # Funktion für weiteren Ballbesitz weiter unten des Feldes
+        elif random.random() < 0.3:
+            print("Incomplete pass! The Chiefs defense has blocked your pass!")
+            # Funktion für 2,3,4 & 10 - STOP wenn nach 4&10 immernoch nicht weiter gekommen ist
+        else:
+            print("OH NOOOO! You're pass has been intercepted! Now the Chiefs have the ball!")
+            print("Keep ypur head up! Take a breather and come back stronger after their posession!")
+            chiefs_posession()
+    elif qb_choice == "3":
+        if random.random() < 0.3:
+            print("Congrats! You've scored a TOUCHDOWN!")
+            print("Take a breather while the Chiefs are on offense...\n")
+            # Funktion für +7 Punkte einfügen 
+            chiefs_posession()
+        elif random.random() < 0.9:
+            print("Completion! You achieved a new first down and move further down the field!")
+            # Funktion für weiteren Ballbesitz weiter unten des Feldes
+        elif random.random() < 0.3:
+            print("Incomplete pass! The Chiefs defense has blocked your pass!")
+            # Funktion für 2,3,4 & 10 - STOP wenn nach 4&10 immernoch nicht weiter gekommen ist
+        else:
+            print("OH NOOOO! You're pass has been intercepted! Now the Chiefs have the ball!")
+            print("Keep your head up! Take a breather and come back stronger after their posession!")
+            chiefs_posession()
+    else:
+        print("Invalid play. Please choose again.")
+        return giants_posession_choose_play()
 
 welcome()
