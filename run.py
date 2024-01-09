@@ -27,4 +27,14 @@ def user_choice_welcome():
         print("Invalid input. Please choose again.")
         return user_choice_welcome()
 
+"""
+Function to display rules and let user decide if he wants do get back to menu or start game directly
+"""
+def game_rules():
+    print("\nGame Rules:")
+    print("You are the QB of your team and must make crucial decisions to win the game.")
+    print("The coin toss will be your first decision and determines who gets the ball first. Then, you can decide how to play the ball.")
+    print("There are different options, and randomness determines what happens. You can score points or lose the ball.")
+    print("The game ends after 10 possessions you had. The one with more points wins the Super Bowl!\n")
+    game_rules_navigation()
 welcome()
