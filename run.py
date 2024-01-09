@@ -21,8 +21,8 @@ def user_choice_welcome():
         print("Let the games begin...")
         #Add function for game start here!
     elif user_choice_welcome_input == "2":
-        print("Here are the rules!")
-        #Add function for game start here!
+        print("Here are the rules...")
+        game_rules()
     else:
         print("Invalid input. Please choose again.")
         return user_choice_welcome()
@@ -37,4 +37,19 @@ def game_rules():
     print("There are different options, and randomness determines what happens. You can score points or lose the ball.")
     print("The game ends after 10 possessions you had. The one with more points wins the Super Bowl!\n")
     game_rules_navigation()
+
+def game_rules_navigation():
+    print("Do you want to start the game now or go back to the welcome menu?")
+    print("1. Start the game")
+    print("2. Welcome menu\n")
+    user_choice_rules = input("Your choice (1/2): ")
+    if user_choice_rules == "1":
+        print("Let the games begin...")
+    elif user_choice_rules == "2":
+        welcome()
+    else:
+        print("Invalid input. Please choose again.")
+        return game_rules_navigation()
+
+
 welcome()
