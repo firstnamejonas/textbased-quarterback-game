@@ -30,7 +30,7 @@ def user_choice_welcome():
         return user_choice_welcome()
 
 """
-Function to display rules and let user decide if he wants do get back to menu or start game directly
+Functions to display rules and let user decide if he wants do get back to menu or start game directly (navigation function)
 """
 def game_rules():
     print("\nGame Rules:")
@@ -53,5 +53,31 @@ def game_rules_navigation():
         print("Invalid input. Please choose again.")
         return game_rules_navigation()
 
+"""
+Function to start the game. The game starts with the first decission: the cointoss!
+"""
+def start_game_with_cointoss():
+    print("Welcome to the Super Bowl, the most prestigious sporting event of the year!")
+    print("--- New York Giants : Kansas City Chiefs ---")
+    print("It's time for the game to begin, but who will get the ball first and the chance to score the first points?")
+    print("It's your turn!\n")
+    print("Do you want to choose Heads or Tails?")
+    print("1. Heads")
+    print("2. Tails")
+
+    user_choice_cointoss = input("Your choice (1/2): ")
+
+    num=random.randint(1,2)
+
+    if num==1:
+        result="1"
+    elif num==2:
+        result="2"
+    if user_choice_cointoss == result:
+        print("Congrats! Your first win, you get the ball to start the game!\n")
+        giants_possession()
+    else:
+        print("Aw...You've lost the cointoss, but this means nothing!\n")
+        chiefs_posession()
 
 welcome()
