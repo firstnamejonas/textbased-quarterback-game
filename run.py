@@ -80,4 +80,23 @@ def start_game_with_cointoss():
         print("Aw...You've lost the cointoss, but this means nothing!\n")
         chiefs_posession()
 
+"""
+Function when chiefs are in posession. USER HAS NO CONTROL!
+"""
+def chiefs_posession():
+    print("The Chiefs are in posession...\n")
+    if random.random() < 0.4:
+        print("The Chiefs score a TD!")
+        print("Now it's your turn! Go get some points...\n")
+        # Funktion für +7 Punkte einfügen 
+        giants_possession()
+    elif random.random() < 0.4:
+        print("Your defense held and forced a turnover on downs!")
+        print("Now it's your turn! Go get some points...\n")
+        giants_possession()
+    else:
+        print("Your defense has achieved a turnover!")
+        print("Now it's your turn! Go get some points...\n")
+        giants_possession()
+
 welcome()
