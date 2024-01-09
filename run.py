@@ -25,6 +25,7 @@ def user_choice_welcome():
         #Add function for game start here!
     elif user_choice_welcome_input == "2":
         print("Here are the rules...")
+        time.sleep(2)
         game_rules()
     else:
         print("Invalid input. Please choose again.")
@@ -86,6 +87,7 @@ Function when chiefs are in posession. USER HAS NO CONTROL!
 """
 def chiefs_posession():
     print("The Chiefs are in posession...\n")
+    time.sleep(2)
     if random.random() < 0.4:
         print("The Chiefs score a TD!")
         print("Now it's your turn! Go get some points...\n")
