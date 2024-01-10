@@ -117,6 +117,7 @@ def giants_possession():
 Function for user to decide what play to be played.
 """
 def giants_posession_choose_play():
+    consecutive_incomplete_pass = 0 # variable to stop possession if 4 incompletions in a row accure
     print("\nWhich play do you choose?")
     print("1. Long Pass to WR")
     print("2. Short Pass to WR")
@@ -132,10 +133,16 @@ def giants_posession_choose_play():
             chiefs_posession()
         elif random.random() < 0.5:
             print("Completion! You achieved a new first down and move further down the field!")
-            # Funktion für weiteren Ballbesitz weiter unten des Feldes
+            consecutive_incomplete_pass = 0 # reset to zero with new first down
+            giants_posession_choose_play()
         elif random.random() < 0.5:
             print("Incomplete pass! The Chiefs defense has blocked your pass!")
-            # Funktion für 2,3,4 & 10 - STOP wenn nach 4&10 immernoch nicht weiter gekommen ist
+            consecutive_incomplete_pass += 1
+            if consecutive_incomplete_pass == 4:
+                print("Four consecutive incomplete passes! Chiefs take possession.")
+                chiefs_posession()
+            else:
+                giants_posession_choose_play()
         else:
             print("OH NOOOO! You're pass has been intercepted! Now the Chiefs have the ball!")
             print("Keep ypur head up! Take a breather and come back stronger after their posession!")
@@ -148,10 +155,16 @@ def giants_posession_choose_play():
             chiefs_posession()
         elif random.random() < 0.9:
             print("Completion! You achieved a new first down and move further down the field!")
-            # Funktion für weiteren Ballbesitz weiter unten des Feldes
+            consecutive_incomplete_pass = 0 # reset to zero with new first down
+            giants_posession_choose_play()
         elif random.random() < 0.3:
             print("Incomplete pass! The Chiefs defense has blocked your pass!")
-            # Funktion für 2,3,4 & 10 - STOP wenn nach 4&10 immernoch nicht weiter gekommen ist
+            consecutive_incomplete_pass += 1
+            if consecutive_incomplete_pass == 4:
+                print("Four consecutive incomplete passes! Chiefs take possession.")
+                chiefs_posession()
+            else:
+                giants_posession_choose_play()
         else:
             print("OH NOOOO! You're pass has been intercepted! Now the Chiefs have the ball!")
             print("Keep ypur head up! Take a breather and come back stronger after their posession!")
@@ -164,10 +177,16 @@ def giants_posession_choose_play():
             chiefs_posession()
         elif random.random() < 0.9:
             print("Completion! You achieved a new first down and move further down the field!")
-            # Funktion für weiteren Ballbesitz weiter unten des Feldes
+            consecutive_incomplete_pass = 0 # reset to zero with new first down
+            giants_posession_choose_play()
         elif random.random() < 0.3:
             print("Incomplete pass! The Chiefs defense has blocked your pass!")
-            # Funktion für 2,3,4 & 10 - STOP wenn nach 4&10 immernoch nicht weiter gekommen ist
+            consecutive_incomplete_pass += 1
+            if consecutive_incomplete_pass == 4:
+                print("Four consecutive incomplete passes! Chiefs take possession.")
+                chiefs_posession()
+            else:
+                giants_posession_choose_play()
         else:
             print("OH NOOOO! You're pass has been intercepted! Now the Chiefs have the ball!")
             print("Keep your head up! Take a breather and come back stronger after their posession!")
@@ -176,4 +195,5 @@ def giants_posession_choose_play():
         print("Invalid play. Please choose again.")
         return giants_posession_choose_play()
 
-welcome()
+#welcome()
+giants_posession_choose_play()
