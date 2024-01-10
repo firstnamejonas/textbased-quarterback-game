@@ -91,6 +91,12 @@ giants_scored_point = 0
 Function when chiefs are in posession. USER HAS NO CONTROL!
 """
 def chiefs_posession():
+
+    global chiefs_scored_points  # Zugriff auf die globale Variable
+    global giants_scored_point
+
+    print("Current Score:")
+    print(f"--- New York Giants {giants_scored_point} : {chiefs_scored_points} Kansas City Chiefs ---")
     print("The Chiefs are in posession...\n")
     time.sleep(2)
     if random.random() < 0.4:
