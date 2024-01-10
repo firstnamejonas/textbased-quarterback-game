@@ -83,6 +83,10 @@ def start_game_with_cointoss():
         print("Aw...You've lost the cointoss, but this means nothing!\n")
         chiefs_posession()
 
+# Variables as Data for scoreboard
+chiefs_scored_points = 0
+giants_scored_point = 0
+
 """
 Function when chiefs are in posession. USER HAS NO CONTROL!
 """
