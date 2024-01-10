@@ -117,6 +117,9 @@ def chiefs_posession():
 Function when the Giants (The User) is in possession of the ball with random starting position and yard line. 
 """
 def giants_possession():
+    print("Current Score:")
+    print(f"--- New York Giants {giants_scored_point} : {chiefs_scored_points} Kansas City Chiefs ---")
+
     yard_line = random.randint(1, 50)
     starting_position = random.choice(["own", "opponents"])
 
@@ -206,4 +209,4 @@ def giants_posession_choose_play():
         return giants_posession_choose_play()
 
 #welcome()
-giants_posession_choose_play()
+chiefs_posession()
