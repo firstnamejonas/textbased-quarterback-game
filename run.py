@@ -99,12 +99,12 @@ def chiefs_posession():
     print(f"--- New York Giants {giants_scored_point} : {chiefs_scored_points} Kansas City Chiefs ---")
     print("The Chiefs are in posession...\n")
     time.sleep(2)
-    if random.random() < 0.4:
+    if random.random() < 0.9:
         print("The Chiefs score a TD!")
         print("Now it's your turn! Go get some points...\n")
-        # Funktion für +7 Punkte einfügen 
+        chiefs_scored_points += 7 
         giants_possession()
-    elif random.random() < 0.4:
+    elif random.random() < 0.5:
         print("Your defense held and forced a turnover on downs!")
         print("Now it's your turn! Go get some points...\n")
         giants_possession()
