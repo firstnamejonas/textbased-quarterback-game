@@ -130,6 +130,10 @@ def giants_possession():
 Function for user to decide what play to be played.
 """
 def giants_posession_choose_play():
+
+    global chiefs_scored_points  # Zugriff auf die globale Variable
+    global giants_scored_point
+
     consecutive_incomplete_pass = 0 # variable to stop possession if 4 incompletions in a row accure
     print("\nWhich play do you choose?")
     print("1. Long Pass to WR")
@@ -142,7 +146,7 @@ def giants_posession_choose_play():
         if random.random() < 0.5:
             print("Congrats! You've scored a TOUCHDOWN!")
             print("Take a breather while the Chiefs are on offense...\n")
-            # Funktion für +7 Punkte einfügen 
+            giants_scored_point += 7 
             chiefs_posession()
         elif random.random() < 0.5:
             print("Completion! You achieved a new first down and move further down the field!")
@@ -164,7 +168,7 @@ def giants_posession_choose_play():
         if random.random() < 0.3:
             print("Congrats! You've scored a TOUCHDOWN!")
             print("Take a breather while the Chiefs are on offense...\n")
-            # Funktion für +7 Punkte einfügen 
+            giants_scored_point += 7 
             chiefs_posession()
         elif random.random() < 0.9:
             print("Completion! You achieved a new first down and move further down the field!")
@@ -186,7 +190,7 @@ def giants_posession_choose_play():
         if random.random() < 0.3:
             print("Congrats! You've scored a TOUCHDOWN!")
             print("Take a breather while the Chiefs are on offense...\n")
-            # Funktion für +7 Punkte einfügen 
+            giants_scored_point += 7 
             chiefs_posession()
         elif random.random() < 0.9:
             print("Completion! You achieved a new first down and move further down the field!")
@@ -209,4 +213,4 @@ def giants_posession_choose_play():
         return giants_posession_choose_play()
 
 #welcome()
-chiefs_posession()
+giants_possession()
