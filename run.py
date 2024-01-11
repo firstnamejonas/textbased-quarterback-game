@@ -120,13 +120,25 @@ def chiefs_posession():
         time.sleep(2)
         giants_possession()
 
+user_possession_counter = 0
+
 """
 Function when the Giants (The User) is in possession of the ball with random starting position and yard line. 
 """
 def giants_possession():
+
+    global user_possession_counter
+
+    user_possession_counter += 1
+
     print("Current Score:")
     print(f"--- New York Giants {giants_scored_point} : {chiefs_scored_points} Kansas City Chiefs ---")
     time.sleep(2)
+
+    if user_possession_counter == 10:
+        print("\nThis is your last possession - Make it count!")
+    else:
+        print(f"Possession: {user_possession_counter} / 10")
 
     yard_line = random.randint(1, 50)
     starting_position = random.choice(["own", "opponents"])
@@ -141,6 +153,7 @@ def giants_posession_choose_play():
 
     global chiefs_scored_points  # Zugriff auf die globale Variable
     global giants_scored_point
+    global user_possession_counter
 
     consecutive_incomplete_pass = 0 # variable to stop possession if 4 incompletions in a row accure
     print("\nWhich play do you choose?")
@@ -153,10 +166,16 @@ def giants_posession_choose_play():
     if qb_choice == "1":
         if random.random() < 0.5:
             print("Congrats! You've scored a TOUCHDOWN!")
-            print("Take a breather while the Chiefs are on offense...\n")
-            giants_scored_point += 7 
-            time.sleep(2)
-            chiefs_posession()
+            if user_possession_counter == 10:
+                print("This was your last drive...")
+                giants_scored_point += 7 
+                time.sleep(2)
+                end_game()
+            else:
+                print("Take a breather while the Chiefs are on offense...\n")
+                giants_scored_point += 7 
+                time.sleep(2)
+                chiefs_posession()
         elif random.random() < 0.5:
             print("Completion! You achieved a new first down and move further down the field!")
             consecutive_incomplete_pass = 0 # reset to zero with new first down
@@ -165,16 +184,26 @@ def giants_posession_choose_play():
             print("Incomplete pass! The Chiefs defense has blocked your pass!")
             consecutive_incomplete_pass += 1
             if consecutive_incomplete_pass == 4:
-                print("Four consecutive incomplete passes! Chiefs take possession.")
-                time.sleep(2)
-                chiefs_posession()
+                if user_possession_counter == 10:
+                    print("Four consecutive incomplete passes! This was your last drive...")
+                    time.sleep(2)
+                    end_game()
+                else:
+                    print("Four consecutive incomplete passes! Chiefs take possession.")
+                    time.sleep(2)
+                    chiefs_posession()
             else:
                 giants_posession_choose_play()
         else:
-            print("OH NOOOO! You're pass has been intercepted! Now the Chiefs have the ball!")
-            print("Keep ypur head up! Take a breather and come back stronger after their posession!")
-            time.sleep(2)
-            chiefs_posession()
+            if user_possession_counter == 10:
+                print("OH NOOOO! You're pass has been intercepted! This was your last drive...")
+                time.sleep(2)
+                end_game()
+            else:
+                print("OH NOOOO! You're pass has been intercepted! Now the Chiefs have the ball!")
+                print("Keep ypur head up! Take a breather and come back stronger after their posession!")
+                time.sleep(2)
+                chiefs_posession()
     elif qb_choice == "2":
         if random.random() < 0.3:
             print("Congrats! You've scored a TOUCHDOWN!")
@@ -228,6 +257,15 @@ def giants_posession_choose_play():
     else:
         print("Invalid play. Please choose again.")
         return giants_posession_choose_play()
+
+def end_game():
+    print("\nTHIS IS THE END!")
+    print(f"Final Score: New York Giants {giants_scored_point} : {chiefs_scored_points} Kansas City Chiefs")
+    if giants_scored_point > chiefs_scored_points:
+        print("Congratulations! You win the Super Bowl! You are a world champion!")
+    else:
+        print("Unfortunately, you lose the Super Bowl. Better luck next time!")
+    #Funktion für Unentschieden ?!
 
 #welcome()
 giants_possession()
