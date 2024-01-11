@@ -320,6 +320,32 @@ def start_overtime():
     coin_toss_overtime()
 
 """
+"""
+Function for the cointoss in overtime.
+"""
+def coin_toss_overtime():
+    print("\nDo you want to choose Heads or Tails?")
+    print("1. Heads")
+    print("2. Tails")
+
+    user_choice_cointoss = input("Your choice (1/2):\n")
+
+    num=random.randint(1,2)
+
+    if num==1:
+        result="1"
+    elif num==2:
+        result="2"
+    if user_choice_cointoss == result:
+        print("Congrats! Your win, you get the ball to start the overtime!\n")
+        giants_possession_overtime()
+        time.sleep(2)
+    else:
+        print("Aw...You've lost the cointoss!\n")
+        print("The Chiefs are taking over to start the overtime...\n")
+        time.sleep(2)
+        chiefs_posession_overtime()
+
     else:
 def end_game_navigation ():
     print('Head back to the main menu and end this game by clicking "1" on your keyboard?')
