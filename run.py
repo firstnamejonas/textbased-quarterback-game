@@ -23,7 +23,7 @@ def user_choice_welcome():
     if user_choice_welcome_input == "1":
         print("Let the games begin...")
         time.sleep(2)
-        start_game_with_cointoss()
+        start_game()
     elif user_choice_welcome_input == "2":
         print("Here are the rules...")
         time.sleep(2)
@@ -54,7 +54,7 @@ def game_rules_navigation():
     if user_choice_rules == "1":
         print("Let the games begin...")
         time.sleep(2)
-        start_game_with_cointoss()
+        start_game()
     elif user_choice_rules == "2":
         welcome()
     else:
@@ -64,31 +64,40 @@ def game_rules_navigation():
 """
 Function to start the game. The game starts with the first decission: the cointoss!
 """
-def start_game_with_cointoss():
+def start_game():
     print("Welcome to the Super Bowl, the most prestigious sporting event of the year!")
     print("--- New York Giants : Kansas City Chiefs ---")
     print("It's time for the game to begin, but who will get the ball first and the chance to score the first points?")
     print("It's your turn!\n")
-    print("Do you want to choose Heads or Tails?")
-    print("1. Heads")
-    print("2. Tails")
+    cointoss_start_game()
 
-    user_choice_cointoss = input("Your choice (1/2):\n")
+"""
+Function to start the game with the first decission: the cointoss!
+"""
+def cointoss_start_game():
+    while True:
+        print("\nDo you want to choose Heads or Tails?")
+        print("1. Heads")
+        print("2. Tails")
 
-    num=random.randint(1,2)
+        user_choice_cointoss = input("Your choice (1/2):\n")
 
-    if num==1:
-        result="1"
-    elif num==2:
-        result="2"
+        if user_choice_cointoss in ("1", "2"):
+            break
+        else:
+            print("Invalid input. Please choose again.")
+
+    num = random.randint(1, 2)
+    result = str(num)
+
     if user_choice_cointoss == result:
-        print("Congrats! Your first win, you get the ball to start the game!\n")
+        print("Congrats! Your first win, now let's get started...")
+        time.sleep(2)
         giants_possession()
-        time.sleep(2)
     else:
-        print("Aw...You've lost the cointoss, but this means nothing!\n")
-        chiefs_posession()
+        print("Aw...You've lost the cointoss, but that means nothing!\n")
         time.sleep(2)
+        chiefs_posession()
 
 # Variables as Data for scoreboard
 chiefs_scored_points = 0
@@ -508,4 +517,4 @@ def end_game_navigation ():
         return end_game_navigation()
 
 #welcome()
-start_overtime()
+cointoss_start_game()
