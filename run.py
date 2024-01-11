@@ -290,10 +290,28 @@ def giants_posession_choose_play():
         print("Invalid play. Please choose again.")
         return giants_posession_choose_play()
 
+"""
+Function for the end of the game.
+"""
 def end_game():
     print("\nTHIS IS THE END!")
     print(f"Final Score: New York Giants {giants_scored_point} : {chiefs_scored_points} Kansas City Chiefs")
     if giants_scored_point > chiefs_scored_points:
+        print("Congratulations! You win the Super Bowl! You are a world champion!\n")
+        time.sleep(2)
+        print("This is the end of the game...")
+        print("I hope you had as much fun playing it as i had programming it...")
+        end_game_navigation()
+    elif giants_scored_point < chiefs_scored_points:
+        print("Unfortunately, you lose the Super Bowl. Better luck next time!\n")
+        time.sleep(2)
+        print("This is the end of the game...")
+        print("I hope you had as much fun playing it as i had programming it...")
+        end_game_navigation()
+    else:
+        print("No winner after regulation!")
+        start_overtime()
+
 """
 Function for overtime to start, when game ended in a draw
 """
