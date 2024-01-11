@@ -294,7 +294,14 @@ def end_game():
     print("\nTHIS IS THE END!")
     print(f"Final Score: New York Giants {giants_scored_point} : {chiefs_scored_points} Kansas City Chiefs")
     if giants_scored_point > chiefs_scored_points:
-        print("Congratulations! You win the Super Bowl! You are a world champion!")
+"""
+Function for overtime to start, when game ended in a draw
+"""
+def start_overtime():
+    print("It's overtime! The first team to score wins. Let's start with a coin toss.")
+    coin_toss_overtime()
+
+"""
     else:
         print("Unfortunately, you lose the Super Bowl. Better luck next time!")
     #Funktion für Unentschieden ?!
