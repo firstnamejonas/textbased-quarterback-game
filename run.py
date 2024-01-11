@@ -447,20 +447,23 @@ def giants_posession_choose_play_overtime():
 Function for the cointoss in overtime.
 """
 def coin_toss_overtime():
-    print("\nDo you want to choose Heads or Tails?")
-    print("1. Heads")
-    print("2. Tails")
+    while True:
+        print("\nDo you want to choose Heads or Tails?")
+        print("1. Heads")
+        print("2. Tails")
 
-    user_choice_cointoss = input("Your choice (1/2):\n")
+        user_choice_cointoss_overtime = input("Your choice (1/2):\n")
 
-    num=random.randint(1,2)
+        if user_choice_cointoss_overtime in ("1", "2"):
+            break
+        else:
+            print("Invalid input. Please choose again.")
 
-    if num==1:
-        result="1"
-    elif num==2:
-        result="2"
-    if user_choice_cointoss == result:
-        print("Congrats! Your win, you get the ball to start the overtime!\n")
+    num_overtime = random.randint(1, 2)
+    result = str(num_overtime)
+
+    if user_choice_cointoss_overtime == result:
+        print("Congrats! You win, you get the ball to start the overtime!\n")
         giants_possession_overtime()
         time.sleep(2)
     else:
