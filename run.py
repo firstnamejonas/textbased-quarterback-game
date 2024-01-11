@@ -320,6 +320,24 @@ def start_overtime():
     coin_toss_overtime()
 
 """
+Function for chiefs possession in overtime.
+"""
+def chiefs_posession_overtime():
+
+    global chiefs_scored_points  # Zugriff auf die globale Variable
+    global giants_scored_point
+
+    if random.random() < 0.5:
+        print("The Chiefs scored a TOUCHDOWN...")
+        print("Unfortunately that means that you have lost...")
+        chiefs_scored_points += 7
+        time.sleep(2)
+        end_game_after_overtime()
+    else:
+        print("The Chiefs did not score. Now it's your chance to win it all!\n")
+        time.sleep(2)
+        giants_possession_overtime()
+
 """
 Function for the cointoss in overtime.
 """
