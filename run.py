@@ -466,7 +466,22 @@ def coin_toss_overtime():
         time.sleep(2)
         chiefs_posession_overtime()
 
+def end_game_after_overtime():
+    print("\nTHIS IS THE END!")
+    print(f"Final Score: New York Giants {giants_scored_point} : {chiefs_scored_points} Kansas City Chiefs")
+    if giants_scored_point > chiefs_scored_points:
+        print("Congratulations! You win the Super Bowl! You are a world champion!\n")
+        time.sleep(2)
+        print("This is the end of the game...")
+        print("I hope you had as much fun playing it as i had programming it...")
+        end_game_navigation()
     else:
+        print("Unfortunately, you lose the Super Bowl. Better luck next time!\n")
+        time.sleep(2)
+        print("This is the end of the game...")
+        print("I hope you had as much fun playing it as i had programming it...")
+        end_game_navigation()
+
 def end_game_navigation ():
     print('Head back to the main menu and end this game by clicking "1" on your keyboard?')
 
@@ -481,4 +496,4 @@ def end_game_navigation ():
         return end_game_navigation()
 
 #welcome()
-giants_possession()
+start_overtime()
