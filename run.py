@@ -18,7 +18,7 @@ def user_choice_welcome():
     print("1. Start the game")
     print("2. Read the rules\n")
 
-    user_choice_welcome_input = input("Your choice (1/2): ")
+    user_choice_welcome_input = input("Your choice (1/2):\n")
 
     if user_choice_welcome_input == "1":
         print("Let the games begin...")
@@ -47,7 +47,7 @@ def game_rules_navigation():
     print("Do you want to start the game now or go back to the welcome menu?")
     print("1. Start the game")
     print("2. Welcome menu\n")
-    user_choice_rules = input("Your choice (1/2): ")
+    user_choice_rules = input("Your choice (1/2):\n")
     if user_choice_rules == "1":
         print("Let the games begin...")
     elif user_choice_rules == "2":
@@ -68,7 +68,7 @@ def start_game_with_cointoss():
     print("1. Heads")
     print("2. Tails")
 
-    user_choice_cointoss = input("Your choice (1/2): ")
+    user_choice_cointoss = input("Your choice (1/2):\n")
 
     num=random.randint(1,2)
 
@@ -136,7 +136,7 @@ def giants_posession_choose_play():
     print("2. Short Pass to WR")
     print("3. Short Pass to TE")
 
-    qb_choice = input("Your choice (1/2/3): ")
+    qb_choice = input("Your choice (1/2/3):\n")
     
     if qb_choice == "1":
         if random.random() < 0.5:
