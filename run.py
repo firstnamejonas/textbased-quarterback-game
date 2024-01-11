@@ -303,8 +303,18 @@ def start_overtime():
 
 """
     else:
-        print("Unfortunately, you lose the Super Bowl. Better luck next time!")
-    #Funktion für Unentschieden ?!
+def end_game_navigation ():
+    print('Head back to the main menu and end this game by clicking "1" on your keyboard?')
+
+    input_end_game_navigation = input("Press (1):\n")
+
+    if input_end_game_navigation == "1":
+        print("See you next time!\n")
+        time.sleep(2)
+        welcome()
+    else:
+        print("Invalid input. Please choose again.")
+        return end_game_navigation()
 
 #welcome()
 giants_possession()
