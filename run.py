@@ -339,6 +339,16 @@ def chiefs_posession_overtime():
         giants_possession_overtime()
 
 """
+Function for the user possession to start.
+"""
+def giants_possession_overtime():
+    yard_line = random.randint(1, 50)
+    starting_position = random.choice(["own", "opponents"])
+
+    print(f"You start at your {starting_position} {yard_line} Yard line!")
+    giants_posession_choose_play_overtime()
+
+"""
 Function for the cointoss in overtime.
 """
 def coin_toss_overtime():
