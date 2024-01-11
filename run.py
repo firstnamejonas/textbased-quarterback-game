@@ -43,6 +43,9 @@ def game_rules():
     print("The game ends after 10 possessions you had. The one with more points wins the Super Bowl!\n")
     game_rules_navigation()
 
+"""
+Function to let user navigate back to the main menu or start the game while in the rules.
+"""
 def game_rules_navigation():
     print("Do you want to start the game now or go back to the welcome menu?")
     print("1. Start the game")
@@ -466,6 +469,9 @@ def coin_toss_overtime():
         time.sleep(2)
         chiefs_posession_overtime()
 
+"""
+Function to end the game after overtime.
+"""
 def end_game_after_overtime():
     print("\nTHIS IS THE END!")
     print(f"Final Score: New York Giants {giants_scored_point} : {chiefs_scored_points} Kansas City Chiefs")
@@ -482,6 +488,9 @@ def end_game_after_overtime():
         print("I hope you had as much fun playing it as i had programming it...")
         end_game_navigation()
 
+"""
+Function to let user navigate back to the main menu.
+"""
 def end_game_navigation ():
     print('Head back to the main menu and end this game by clicking "1" on your keyboard?')
 
