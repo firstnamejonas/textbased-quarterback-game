@@ -115,7 +115,7 @@ def chiefs_posession():
     print(f"--- New York Giants {giants_scored_point} : {chiefs_scored_points} Kansas City Chiefs ---")
     print("The Chiefs are in posession...\n")
     time.sleep(2)
-    if random.random() < 0.9:
+    if random.random() < 0.5:
         print("The Chiefs score a TD!")
         print("Now it's your turn! Go get some points...\n")
         chiefs_scored_points += 7 
@@ -229,7 +229,7 @@ def giants_posession_choose_play():
                 giants_scored_point += 7 
                 time.sleep(2)
                 chiefs_posession()
-        elif random.random() < 0.9:
+        elif random.random() < 0.7:
             print("Completion! You achieved a new first down and move further down the field!")
             consecutive_incomplete_pass = 0 # reset to zero with new first down
             giants_posession_choose_play()
@@ -270,7 +270,7 @@ def giants_posession_choose_play():
                 giants_scored_point += 7 
                 time.sleep(2)
                 chiefs_posession()
-        elif random.random() < 0.9:
+        elif random.random() < 0.7:
             print("Completion! You achieved a new first down and move further down the field!")
             consecutive_incomplete_pass = 0 # reset to zero with new first down
             giants_posession_choose_play()
@@ -406,7 +406,7 @@ def giants_posession_choose_play_overtime():
             print("This is it! You've won the Super Bowl!")
             giants_scored_point += 7
             end_game_after_overtime()
-        elif random.random() < 0.5:
+        elif random.random() < 0.7:
             print("Completion! You achieved a new first down and move further down the field!")
             consecutive_incomplete_pass = 0 # reset to zero with new first down
             giants_posession_choose_play_overtime()
@@ -430,7 +430,7 @@ def giants_posession_choose_play_overtime():
             print("This is it! You've won the Super Bowl!")
             giants_scored_point += 7
             end_game_after_overtime()
-        elif random.random() < 0.5:
+        elif random.random() < 0.7:
             print("Completion! You achieved a new first down and move further down the field!")
             consecutive_incomplete_pass = 0 # reset to zero with new first down
             giants_posession_choose_play_overtime()
@@ -516,5 +516,4 @@ def end_game_navigation ():
         print("Invalid input. Please choose again.")
         return end_game_navigation()
 
-#welcome()
-cointoss_start_game()
+welcome()
