@@ -147,7 +147,7 @@ def giants_possession():
     print(f"--- New York Giants {giants_scored_point} : {chiefs_scored_points} Kansas City Chiefs ---")
     time.sleep(2)
 
-    if user_possession_counter == 10:
+    if user_possession_counter == 7:
         print("\nThis is your last possession - Make it count!")
     else:
         print(f"Possession: {user_possession_counter} / 10")
@@ -178,7 +178,7 @@ def giants_posession_choose_play():
     if qb_choice == "1":
         if random.random() < 0.5:
             print("Congrats! You've scored a TOUCHDOWN!")
-            if user_possession_counter == 10:
+            if user_possession_counter == 7:
                 print("This was your last drive...")
                 giants_scored_point += 7 
                 time.sleep(2)
@@ -196,7 +196,7 @@ def giants_posession_choose_play():
             print("Incomplete pass! The Chiefs defense has blocked your pass!")
             consecutive_incomplete_pass += 1
             if consecutive_incomplete_pass == 4:
-                if user_possession_counter == 10:
+                if user_possession_counter == 7:
                     print("Four consecutive incomplete passes! This was your last drive...")
                     time.sleep(2)
                     end_game()
@@ -207,7 +207,7 @@ def giants_posession_choose_play():
             else:
                 giants_posession_choose_play()
         else:
-            if user_possession_counter == 10:
+            if user_possession_counter == 7:
                 print("OH NOOOO! You're pass has been intercepted! This was your last drive...")
                 time.sleep(2)
                 end_game()
@@ -219,7 +219,7 @@ def giants_posession_choose_play():
     elif qb_choice == "2":
         if random.random() < 0.3:
             print("Congrats! You've scored a TOUCHDOWN!")
-            if user_possession_counter == 10:
+            if user_possession_counter == 7:
                 print("This was your last drive...")
                 giants_scored_point += 7 
                 time.sleep(2)
@@ -237,7 +237,7 @@ def giants_posession_choose_play():
             print("Incomplete pass! The Chiefs defense has blocked your pass!")
             consecutive_incomplete_pass += 1
             if consecutive_incomplete_pass == 4:
-                if user_possession_counter == 10:
+                if user_possession_counter == 7:
                     print("Four consecutive incomplete passes! This was your last drive...")
                     time.sleep(2)
                     end_game()
@@ -248,7 +248,7 @@ def giants_posession_choose_play():
             else:
                 giants_posession_choose_play()
         else:
-            if user_possession_counter == 10:
+            if user_possession_counter == 7:
                 print("OH NOOOO! You're pass has been intercepted! This was your last drive...")
                 time.sleep(2)
                 end_game()
@@ -260,7 +260,7 @@ def giants_posession_choose_play():
     elif qb_choice == "3":
         if random.random() < 0.3:
             print("Congrats! You've scored a TOUCHDOWN!")
-            if user_possession_counter == 10:
+            if user_possession_counter == 7:
                 print("This was your last drive...")
                 giants_scored_point += 7 
                 time.sleep(2)
@@ -278,7 +278,7 @@ def giants_posession_choose_play():
             print("Incomplete pass! The Chiefs defense has blocked your pass!")
             consecutive_incomplete_pass += 1
             if consecutive_incomplete_pass == 4:
-                if user_possession_counter == 10:
+                if user_possession_counter == 7:
                     print("Four consecutive incomplete passes! This was your last drive...")
                     time.sleep(2)
                     end_game()
@@ -289,7 +289,7 @@ def giants_posession_choose_play():
             else:
                 giants_posession_choose_play()
         else:
-            if user_possession_counter == 10:
+            if user_possession_counter == 7:
                 print("OH NOOOO! You're pass has been intercepted! This was your last drive...")
                 time.sleep(2)
                 end_game()
