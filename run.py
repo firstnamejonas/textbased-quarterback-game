@@ -189,10 +189,16 @@ def giants_posession_choose_play():
                 giants_scored_point += 7 
                 time.sleep(2)
                 chiefs_posession()
-        elif random.random() < 0.5:
-            print("Completion! You achieved a new first down and move further down the field!")
-            consecutive_incomplete_pass = 0 # reset to zero with new first down
-            giants_posession_choose_play()
+        elif random.random() < 0.2:
+            if user_possession_counter == 7:
+                print("OH NOOOO! You're pass has been intercepted! This was your last drive...")
+                time.sleep(2)
+                end_game()
+            else:
+                print("OH NOOOO! You're pass has been intercepted! Now the Chiefs have the ball!")
+                print("Keep ypur head up! Take a breather and come back stronger after their posession!")
+                time.sleep(2)
+                chiefs_posession()
         elif random.random() < 0.5:
             print("Incomplete pass! The Chiefs defense has blocked your pass!")
             consecutive_incomplete_pass += 1
@@ -208,15 +214,9 @@ def giants_posession_choose_play():
             else:
                 giants_posession_choose_play()
         else:
-            if user_possession_counter == 7:
-                print("OH NOOOO! You're pass has been intercepted! This was your last drive...")
-                time.sleep(2)
-                end_game()
-            else:
-                print("OH NOOOO! You're pass has been intercepted! Now the Chiefs have the ball!")
-                print("Keep ypur head up! Take a breather and come back stronger after their posession!")
-                time.sleep(2)
-                chiefs_posession()
+            print("Completion! You achieved a new first down and move further down the field!")
+            consecutive_incomplete_pass = 0 # reset to zero with new first down
+            giants_posession_choose_play()
     elif qb_choice == "2":
         if random.random() < 0.3:
             print("Congrats! You've scored a TOUCHDOWN!")
@@ -230,10 +230,16 @@ def giants_posession_choose_play():
                 giants_scored_point += 7 
                 time.sleep(2)
                 chiefs_posession()
-        elif random.random() < 0.7:
-            print("Completion! You achieved a new first down and move further down the field!")
-            consecutive_incomplete_pass = 0 # reset to zero with new first down
-            giants_posession_choose_play()
+        elif random.random() < 0.2:
+            if user_possession_counter == 7:
+                print("OH NOOOO! You're pass has been intercepted! This was your last drive...")
+                time.sleep(2)
+                end_game()
+            else:
+                print("OH NOOOO! You're pass has been intercepted! Now the Chiefs have the ball!")
+                print("Keep ypur head up! Take a breather and come back stronger after their posession!")
+                time.sleep(2)
+                chiefs_posession()
         elif random.random() < 0.3:
             print("Incomplete pass! The Chiefs defense has blocked your pass!")
             consecutive_incomplete_pass += 1
@@ -249,15 +255,9 @@ def giants_posession_choose_play():
             else:
                 giants_posession_choose_play()
         else:
-            if user_possession_counter == 7:
-                print("OH NOOOO! You're pass has been intercepted! This was your last drive...")
-                time.sleep(2)
-                end_game()
-            else:
-                print("OH NOOOO! You're pass has been intercepted! Now the Chiefs have the ball!")
-                print("Keep ypur head up! Take a breather and come back stronger after their posession!")
-                time.sleep(2)
-                chiefs_posession()
+            print("Completion! You achieved a new first down and move further down the field!")
+            consecutive_incomplete_pass = 0 # reset to zero with new first down
+            giants_posession_choose_play()
     elif qb_choice == "3":
         if random.random() < 0.3:
             print("Congrats! You've scored a TOUCHDOWN!")
@@ -271,10 +271,16 @@ def giants_posession_choose_play():
                 giants_scored_point += 7 
                 time.sleep(2)
                 chiefs_posession()
-        elif random.random() < 0.7:
-            print("Completion! You achieved a new first down and move further down the field!")
-            consecutive_incomplete_pass = 0 # reset to zero with new first down
-            giants_posession_choose_play()
+        elif random.random() < 0.2:
+            if user_possession_counter == 7:
+                print("OH NOOOO! You're pass has been intercepted! This was your last drive...")
+                time.sleep(2)
+                end_game()
+            else:
+                print("OH NOOOO! You're pass has been intercepted! Now the Chiefs have the ball!")
+                print("Keep ypur head up! Take a breather and come back stronger after their posession!")
+                time.sleep(2)
+                chiefs_posession()
         elif random.random() < 0.3:
             print("Incomplete pass! The Chiefs defense has blocked your pass!")
             consecutive_incomplete_pass += 1
@@ -290,15 +296,9 @@ def giants_posession_choose_play():
             else:
                 giants_posession_choose_play()
         else:
-            if user_possession_counter == 7:
-                print("OH NOOOO! You're pass has been intercepted! This was your last drive...")
-                time.sleep(2)
-                end_game()
-            else:
-                print("OH NOOOO! You're pass has been intercepted! Now the Chiefs have the ball!")
-                print("Keep ypur head up! Take a breather and come back stronger after their posession!")
-                time.sleep(2)
-                chiefs_posession()
+            print("Completion! You achieved a new first down and move further down the field!")
+            consecutive_incomplete_pass = 0 # reset to zero with new first down
+            giants_posession_choose_play()
     else:
         print("Invalid play. Please choose again.")
         return giants_posession_choose_play()
@@ -383,10 +383,11 @@ def giants_posession_choose_play_overtime():
             print("This is it! You've won the Super Bowl!")
             giants_scored_point += 7
             end_game_after_overtime()
-        elif random.random() < 0.5:
-            print("Completion! You achieved a new first down and move further down the field!")
-            consecutive_incomplete_pass = 0 # reset to zero with new first down
-            giants_posession_choose_play_overtime()
+        elif random.random() < 0.2:
+            print("OH NOOOO! You're pass has been intercepted! Now the Chiefs have the ball!")
+            print("Keep ypur head up! Take a breather and come back stronger after their posession!")
+            time.sleep(2)
+            chiefs_posession_overtime()
         elif random.random() < 0.5:
             print("Incomplete pass! The Chiefs defense has blocked your pass!")
             consecutive_incomplete_pass += 1
@@ -397,20 +398,20 @@ def giants_posession_choose_play_overtime():
             else:
                 giants_posession_choose_play_overtime()
         else:
-            print("OH NOOOO! You're pass has been intercepted! Now the Chiefs have the ball!")
-            print("Keep ypur head up! Take a breather and come back stronger after their posession!")
-            time.sleep(2)
-            chiefs_posession_overtime()
+            print("Completion! You achieved a new first down and move further down the field!")
+            consecutive_incomplete_pass = 0 # reset to zero with new first down
+            giants_posession_choose_play_overtime()
     elif qb_choice == "2":
         if random.random() < 0.5:
             print("Congrats! You've scored a TOUCHDOWN!")
             print("This is it! You've won the Super Bowl!")
             giants_scored_point += 7
             end_game_after_overtime()
-        elif random.random() < 0.7:
-            print("Completion! You achieved a new first down and move further down the field!")
-            consecutive_incomplete_pass = 0 # reset to zero with new first down
-            giants_posession_choose_play_overtime()
+        elif random.random() < 0.2:
+            print("OH NOOOO! You're pass has been intercepted! Now the Chiefs have the ball!")
+            print("Keep ypur head up! Take a breather and come back stronger after their posession!")
+            time.sleep(2)
+            chiefs_posession_overtime()
         elif random.random() < 0.5:
             print("Incomplete pass! The Chiefs defense has blocked your pass!")
             consecutive_incomplete_pass += 1
@@ -421,20 +422,20 @@ def giants_posession_choose_play_overtime():
             else:
                 giants_posession_choose_play_overtime()
         else:
-            print("OH NOOOO! You're pass has been intercepted! Now the Chiefs have the ball!")
-            print("Keep ypur head up! Take a breather and come back stronger after their posession!")
-            time.sleep(2)
-            chiefs_posession_overtime()
+            print("Completion! You achieved a new first down and move further down the field!")
+            consecutive_incomplete_pass = 0 # reset to zero with new first down
+            giants_posession_choose_play_overtime()
     elif qb_choice == "3":
         if random.random() < 0.5:
             print("Congrats! You've scored a TOUCHDOWN!")
             print("This is it! You've won the Super Bowl!")
             giants_scored_point += 7
             end_game_after_overtime()
-        elif random.random() < 0.7:
-            print("Completion! You achieved a new first down and move further down the field!")
-            consecutive_incomplete_pass = 0 # reset to zero with new first down
-            giants_posession_choose_play_overtime()
+        elif random.random() < 0.2:
+            print("OH NOOOO! You're pass has been intercepted! Now the Chiefs have the ball!")
+            print("Keep ypur head up! Take a breather and come back stronger after their posession!")
+            time.sleep(2)
+            chiefs_posession_overtime()
         elif random.random() < 0.5:
             print("Incomplete pass! The Chiefs defense has blocked your pass!")
             consecutive_incomplete_pass += 1
@@ -445,10 +446,9 @@ def giants_posession_choose_play_overtime():
             else:
                 giants_posession_choose_play_overtime()
         else:
-            print("OH NOOOO! You're pass has been intercepted! Now the Chiefs have the ball!")
-            print("Keep ypur head up! Take a breather and come back stronger after their posession!")
-            time.sleep(2)
-            chiefs_posession_overtime()
+            print("Completion! You achieved a new first down and move further down the field!")
+            consecutive_incomplete_pass = 0 # reset to zero with new first down
+            giants_posession_choose_play_overtime()
     else:
         print("Invalid play. Please choose again.")
         return giants_posession_choose_play_overtime()
