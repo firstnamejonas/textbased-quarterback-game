@@ -39,8 +39,9 @@ def game_rules():
     print("\nGame Rules:")
     print("You are the QB of your team and must make crucial decisions to win the game.")
     print("The coin toss will be your first decision and determines who gets the ball first. Then, you can decide how to play the ball.")
-    print("There are different options, and randomness determines what happens. You can score points or lose the ball.")
-    print("The game ends after 10 possessions you had. The one with more points wins the Super Bowl!\n")
+    print("There are different options (numbers you can choose for each play), and randomness determines what happens. You can score points or lose the ball.")
+    print("The game ends after 7 possessions you had. The one with more points wins the Super Bowl!")
+    print("If the game is tied after 7 possessions there will be an overtime, which will again start with a cointoss!\n")
     game_rules_navigation()
 
 """
