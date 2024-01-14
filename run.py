@@ -151,7 +151,7 @@ def giants_possession():
     if user_possession_counter == 7:
         print("\nThis is your last possession - Make it count!")
     else:
-        print(f"Possession: {user_possession_counter} / 10")
+        print(f"Possession: {user_possession_counter} / 7")
 
     yard_line = random.randint(1, 50)
     starting_position = random.choice(["own", "opponents"])
