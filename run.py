@@ -453,12 +453,18 @@ def giants_posession_choose_play_overtime():
 
     # variable to stop possession if 4 incompletions in a row accure
     consecutive_incomplete_pass = 0
-    print("\nWhich play do you choose?")
-    print("1. Long Pass to WR")
-    print("2. Short Pass to WR")
-    print("3. Short Pass to TE")
+    while True:
+        print("\nWhich play do you choose?")
+        print("1. Long Pass to WR")
+        print("2. Short Pass to WR")
+        print("3. Short Pass to TE")
 
-    qb_choice = input("Your choice (1/2/3):\n")
+        qb_choice = input("Your choice (1/2/3):\n")
+        clear()
+        if qb_choice in ["1", "2", "3"]:
+            break
+        else:
+            print(f"{qb_choice} isn't valid. Please try again!")
 
     if qb_choice == "1":
         if random.random() < 0.5:
