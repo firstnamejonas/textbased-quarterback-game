@@ -26,27 +26,29 @@ def user_choice_welcome():
     """
     Function to let user decide between starting the game or reading the rules
     """
-    print("Do you want to start the game or read the rules?")
-    print("1. Start the game")
-    print("2. Read the rules\n")
+    while True:
+        print("Do you want to start the game or read the rules?")
+        print("1. Start the game")
+        print("2. Read the rules\n")
 
-    user_choice_welcome_input = input("Your choice (1/2):\n")
-    clear()
+        user_choice_welcome_input = input("Your choice (1/2):\n")
+        clear()
 
-    if user_choice_welcome_input == "1":
-        print("Let the games begin...")
-        time.sleep(2)
-        start_game()
-    elif user_choice_welcome_input == "2":
-        print("Here are the rules...")
-        time.sleep(2)
-        game_rules()
-    else:
-        print(
-            f"{user_choice_welcome_input} is an Invalid input. "
-            "Please choose again."
-        )
-        return user_choice_welcome()
+        if user_choice_welcome_input == "1":
+            print("Let the games begin...")
+            time.sleep(2)
+            start_game()
+            break
+        elif user_choice_welcome_input == "2":
+            print("Here are the rules...")
+            time.sleep(2)
+            game_rules()
+            break
+        else:
+            print(
+                f"{user_choice_welcome_input} is an invalid input. "
+                "Please choose again."
+            )
 
 
 def game_rules():
@@ -615,4 +617,5 @@ def end_game_navigation():
         return end_game_navigation()
 
 
-welcome()
+#welcome()
+user_choice_welcome()
