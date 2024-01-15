@@ -1,10 +1,15 @@
+import os
 import time
 import random
 
-"""
-Start of the game function
-"""
-def welcome():
+
+def clear():
+    """
+    Clear function to clean-up the terminal so things don't get messy.
+    """
+    os.system("cls" if os.name == "nt" else "clear")
+
+
     print('Welcome to the text-based adventure game "QB1".')
     print("In this game you are the quarterback of the New York Giants in the Super Bowl against the Kansas City Chiefs.")
     print("Make the right decisions and win the game of the year!\n")
