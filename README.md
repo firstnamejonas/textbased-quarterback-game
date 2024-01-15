@@ -207,6 +207,7 @@ The local version may have additional debug features enabled for testing purpose
 | [WikiHow](https://www.wikihow.com/Write-a-Coin-Flipping-Program-on-Python) | for tutorial on how to implement the cointoss into the game |
 | [DigitalOcean](https://www.digitalocean.com/community/tutorials/python-time-sleep) | for time.sleep() function to hold back responses for a better user overview |
 | [StackOverflow](https://stackoverflow.com/questions/46820182/randomly-generate-1-or-1-positive-or-negative-integer) | for implementation of randomly generated scenario outcome |
+| [GeeksForGeeks](https://www.geeksforgeeks.org/clear-screen-python/) | used for clear-function for better user overview |
 
 ### Acknowledgements
 
