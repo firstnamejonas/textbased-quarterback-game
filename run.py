@@ -77,19 +77,27 @@ def game_rules_navigation():
     Function to let user navigate back to the main menu or
     start the game while in the rules.
     """
-    print("Do you want to start the game now or go back to the welcome menu?")
-    print("1. Start the game")
-    print("2. Welcome menu\n")
-    user_choice_rules = input("Your choice (1/2):\n")
-    if user_choice_rules == "1":
-        print("Let the games begin...")
-        time.sleep(2)
-        start_game()
-    elif user_choice_rules == "2":
-        welcome()
-    else:
-        print("Invalid input. Please choose again.")
-        return game_rules_navigation()
+    while True:
+        print("Do you want to start the game now ")
+        print("or go back to the welcome menu?")
+        print("1. Start the game")
+        print("2. Welcome menu\n")
+        user_choice_rules = input("Your choice (1/2):\n")
+        clear()
+
+        if user_choice_rules == "1":
+            print("Let the games begin...")
+            time.sleep(2)
+            start_game()
+            break
+        elif user_choice_rules == "2":
+            welcome()
+            break
+        else:
+            print(
+                f"{user_choice_rules} is an invalid input. "
+                "Please choose again."
+            )
 
 
 def start_game():
@@ -618,4 +626,4 @@ def end_game_navigation():
 
 
 #welcome()
-user_choice_welcome()
+game_rules_navigation()
