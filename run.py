@@ -625,6 +625,12 @@ def end_game_navigation():
     """
     Function to let user navigate back to the main menu.
     """
+    global giants_scored_point
+    global chiefs_scored_points
+    global user_possession_counter
+    global consecutive_incomplete_pass
+    global consecutive_incomplete_pass_overtime
+
     print("Head back to the main menu and end this game ")
     print('by clicking "1" on your keyboard?')
 
