@@ -14,6 +14,7 @@ def welcome():
     """
     Start of the game function
     """
+    clear()
     print('Welcome to the text-based adventure game "QB1".')
     print("In this game you are the quarterback of the New York Giants in the Super Bowl against the Kansas City Chiefs.")
     print("Make the right decisions and win the game of the year!\n")
@@ -28,6 +29,7 @@ def user_choice_welcome():
     print("2. Read the rules\n")
 
     user_choice_welcome_input = input("Your choice (1/2):\n")
+    clear()
 
     if user_choice_welcome_input == "1":
         print("Let the games begin...")
@@ -187,7 +189,8 @@ def giants_posession_choose_play():
     print("2. Short Pass to WR")
     print("3. Short Pass to TE")
 
-    qb_choice = input("Your choice (1/2/3):\n")
+        clear()
+        if qb_choice in ["1", "2", "3"]:
     
     if qb_choice == "1":
         if random.random() < 0.5:
