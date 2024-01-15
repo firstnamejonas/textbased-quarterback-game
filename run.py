@@ -634,6 +634,12 @@ def end_game_navigation():
     if input_end_game_navigation == "1":
         print("See you next time!\n")
         time.sleep(2)
+        # reset everything to 0 in case the user plays again!
+        giants_scored_point = 0
+        chiefs_scored_points = 0
+        user_possession_counter = 0
+        consecutive_incomplete_pass = 0
+        consecutive_incomplete_pass_overtime = 0
         welcome()
     else:
         print(
