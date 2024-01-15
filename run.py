@@ -16,9 +16,11 @@ def welcome():
     """
     clear()
     print('Welcome to the text-based adventure game "QB1".')
-    print("In this game you are the quarterback of the New York Giants in the Super Bowl against the Kansas City Chiefs.")
+    print("In this game you are the quarterback of the New York Giants ")
+    print("in the Super Bowl against the Kansas City Chiefs.")
     print("Make the right decisions and win the game of the year!\n")
     user_choice_welcome()
+
 
 def user_choice_welcome():
     """
@@ -40,12 +42,13 @@ def user_choice_welcome():
         time.sleep(2)
         game_rules()
     else:
-        print("Invalid input. Please choose again.")
+        print(
+            f"{user_choice_welcome_input} is an Invalid input. "
+            "Please choose again."
+        )
         return user_choice_welcome()
 
-"""
-Functions to display rules and let user decide if he wants do get back to menu or start game directly (navigation function)
-"""
+
 def game_rules():
     """
     Functions to display rules and let user decide if he wants
@@ -390,14 +393,15 @@ def giants_posession_choose_play_overtime():
     global chiefs_scored_points  # Zugriff auf die globale Variable
     global giants_scored_point
 
-    consecutive_incomplete_pass = 0 # variable to stop possession if 4 incompletions in a row accure
+    # variable to stop possession if 4 incompletions in a row accure
+    consecutive_incomplete_pass = 0
     print("\nWhich play do you choose?")
     print("1. Long Pass to WR")
     print("2. Short Pass to WR")
     print("3. Short Pass to TE")
 
     qb_choice = input("Your choice (1/2/3):\n")
-    
+
     if qb_choice == "1":
         if random.random() < 0.5:
             print("Congrats! You've scored a TOUCHDOWN!")
@@ -420,7 +424,7 @@ def giants_posession_choose_play_overtime():
                 giants_posession_choose_play_overtime()
         else:
             print("Completion! You achieved a new first down and move further down the field!")
-            consecutive_incomplete_pass = 0 # reset to zero with new first down
+            consecutive_incomplete_pass = 0  # reset to zero with new first down
             giants_posession_choose_play_overtime()
     elif qb_choice == "2":
         if random.random() < 0.5:
@@ -514,18 +518,18 @@ def end_game_after_overtime():
         time.sleep(2)
         print("This is the end of the game...")
         print("I hope you had as much fun playing it as i had programming it...")
-        end_game_navigation()
     else:
         print("Unfortunately, you lose the Super Bowl. Better luck next time!\n")
         time.sleep(2)
         print("This is the end of the game...")
         print("I hope you had as much fun playing it as i had programming it...")
-        end_game_navigation()
+
+    end_game_navigation()
 
 """
 Function to let user navigate back to the main menu.
 """
-def end_game_navigation ():
+def end_game_navigation():
     print('Head back to the main menu and end this game by clicking "1" on your keyboard?')
 
     input_end_game_navigation = input("Press (1):\n")
@@ -537,5 +541,6 @@ def end_game_navigation ():
     else:
         print("Invalid input. Please choose again.")
         return end_game_navigation()
+
 
 welcome()
