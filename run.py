@@ -327,6 +327,7 @@ def giants_posession_choose_play():
             # reset to zero with new first down
             consecutive_incomplete_pass = 0
             giants_posession_choose_play()
+    else:
         if random.random() <= 0.2:
             if user_possession_counter == 7:
                 print("OH NOOOO! You're pass has been intercepted! ")
@@ -374,9 +375,6 @@ def giants_posession_choose_play():
             # reset to zero with new first down
             consecutive_incomplete_pass = 0
             giants_posession_choose_play()
-    else:
-        print("Invalid play. Please choose again.")
-        return giants_posession_choose_play()
 
 
 def end_game():
@@ -625,4 +623,4 @@ def end_game_navigation():
 
 
 #welcome()
-giants_possession()
+giants_posession_choose_play()
