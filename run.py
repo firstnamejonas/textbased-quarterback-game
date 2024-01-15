@@ -208,6 +208,10 @@ def giants_possession():
     giants_posession_choose_play()
 
 
+# variable to stop possession if 4 incompletions in a row accure
+consecutive_incomplete_pass = 0
+
+
 def giants_posession_choose_play():
     """
     Function for user to decide what play to be played.
@@ -216,9 +220,8 @@ def giants_posession_choose_play():
     global chiefs_scored_points
     global giants_scored_point
     global user_possession_counter
+    global consecutive_incomplete_pass
 
-    # variable to stop possession if 4 incompletions in a row accure
-    consecutive_incomplete_pass = 0
     while True:
         print("\nWhich play do you choose?")
         print("1. Long Pass to WR")
