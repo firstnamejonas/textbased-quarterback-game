@@ -129,7 +129,10 @@ def cointoss_start_game():
         if user_choice_cointoss in ("1", "2"):
             break
         else:
-            print("Invalid input. Please choose again.")
+            print(
+                f"{user_choice_cointoss} is an invalid input. "
+                "Please choose again."
+            )
 
     num = random.randint(1, 2)
     result = str(num)
@@ -577,7 +580,10 @@ def coin_toss_overtime():
         if user_choice_cointoss_overtime in ("1", "2"):
             break
         else:
-            print("Invalid input. Please choose again.")
+            print(
+                f"{user_choice_cointoss_overtime} is an invalid input. "
+                "Please choose again."
+            )
 
     num_overtime = random.randint(1, 2)
     result = str(num_overtime)
@@ -630,7 +636,10 @@ def end_game_navigation():
         time.sleep(2)
         welcome()
     else:
-        print("Invalid input. Please choose again.")
+        print(
+            f"{user_choice_welcome_input} is an invalid input. "
+            "Please choose again."
+        )
         return end_game_navigation()
 
 
