@@ -10,15 +10,19 @@ def clear():
     os.system("cls" if os.name == "nt" else "clear")
 
 
+def welcome():
+    """
+    Start of the game function
+    """
     print('Welcome to the text-based adventure game "QB1".')
     print("In this game you are the quarterback of the New York Giants in the Super Bowl against the Kansas City Chiefs.")
     print("Make the right decisions and win the game of the year!\n")
     user_choice_welcome()
 
-"""
-Function to let user decide between starting the game or reading the rules
-"""
 def user_choice_welcome():
+    """
+    Function to let user decide between starting the game or reading the rules
+    """
     print("Do you want to start the game or read the rules?")
     print("1. Start the game")
     print("2. Read the rules\n")
@@ -41,6 +45,10 @@ def user_choice_welcome():
 Functions to display rules and let user decide if he wants do get back to menu or start game directly (navigation function)
 """
 def game_rules():
+    """
+    Functions to display rules and let user decide if he wants
+    do get back to menu or start game directly (navigation function)
+    """
     print("\nGame Rules:")
     print("You are the QB of your team and must make crucial decisions to win the game.")
     print("The coin toss will be your first decision and determines who gets the ball first. Then, you can decide how to play the ball.")
