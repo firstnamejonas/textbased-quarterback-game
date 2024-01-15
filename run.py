@@ -124,6 +124,7 @@ def cointoss_start_game():
         print("2. Tails")
 
         user_choice_cointoss = input("Your choice (1/2):\n")
+        clear()
 
         if user_choice_cointoss in ("1", "2"):
             break
@@ -565,6 +566,7 @@ def coin_toss_overtime():
         print("2. Tails")
 
         user_choice_cointoss_overtime = input("Your choice (1/2):\n")
+        clear()
 
         if user_choice_cointoss_overtime in ("1", "2"):
             break
@@ -615,6 +617,7 @@ def end_game_navigation():
     print('by clicking "1" on your keyboard?')
 
     input_end_game_navigation = input("Press (1):\n")
+    clear()
 
     if input_end_game_navigation == "1":
         print("See you next time!\n")
