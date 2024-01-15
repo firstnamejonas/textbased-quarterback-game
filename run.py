@@ -200,7 +200,7 @@ def giants_possession():
     else:
         print(f"Possession: {user_possession_counter} / 7")
 
-    yard_line = random.randint(1, 50)
+    yard_line = random.randint(15, 50)
     starting_position = random.choice(["own", "opponents"])
 
     print(f"You start at your {starting_position} {yard_line} Yard line!")
@@ -626,4 +626,4 @@ def end_game_navigation():
 
 
 #welcome()
-game_rules_navigation()
+giants_possession()
