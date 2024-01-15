@@ -436,7 +436,7 @@ def giants_possession_overtime():
     """
     Function for the user possession to start.
     """
-    yard_line = random.randint(1, 50)
+    yard_line = random.randint(15, 50)
     starting_position = random.choice(["own", "opponents"])
 
     print(f"You start at your {starting_position} {yard_line} Yard line!")
