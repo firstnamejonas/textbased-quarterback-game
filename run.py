@@ -655,5 +655,4 @@ def end_game_navigation():
         return end_game_navigation()
 
 
-#welcome()
-giants_posession_choose_play_overtime()
+welcome()
