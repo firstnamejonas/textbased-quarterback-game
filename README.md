@@ -36,11 +36,14 @@ QB1 is not just a game; it's an experience crafted with your enjoyment in mind. 
 
 | Feature | About | Image |
 | --- | --- | --- |
-| **Quarterback Decision Making:** | From the coin toss to the last decisive pass. There are no limits to the thrill of countless 50/50 decisions in this game. Simple user inputs (predefined numbers) are used to play different scenarios that result from the user's decisions. | ![screenshot](documentation/feature01.png) |
-| **Scoreboard:** | The scoreboard is updated after each possession and displayed to the user before each new team possession, so the user knows the current score at all times. | ![screenshot](documentation/feature02.png) |
-| **User Possession Counter:** | With the user possession counter, the user always knows how many attempts he has left until the game is over. This is because the game is exactly 7 possessions long, which the user can also check in the rules. | ![screenshot](documentation/feature03.png) |
-| **The Rulebook:** | The rulebook provides a brief but easy-to-follow overview of what the game is about, how long the game lasts and how it works. | ![screenshot](documentation/feature04.png) |
-| **Easy User Navigation:** | As already mentioned, the user can navigate through the entire game using simple user inputs. Each input is preceded by a detailed explanation of the consequences of entering a particular number. | ![screenshot](documentation/feature05.png) |
+| Start Menu Navigation | This feature introduces the user to the game and gives them the choice between reading through the rules and navigating to the start of the game. | ![screenshot](documentation/feature01.png) |
+| The Rulebook & Navigation | Once the user has read through the rules, he can simply navigate out of the rules area with this future and decide to start the game or return to the main menu. | ![screenshot](documentation/feature02.png) |
+| The Cointoss (Start of the game & Overtime) | The coin toss at the start of the game decides which team gets the ball first and draws the user directly into the game with interactivity. | ![screenshot](documentation/feature03.png) |
+| The Scoreboard | The scoreboard ensures that the user has an overview of the game progress at the start of each possession. | ![screenshot](documentation/feature04.png) |
+| User Possession Counter | The game ends after 7 user possessions. With the counter, the user is informed at the beginning of each possession about how many possessions they have left to win the game. | ![screenshot](documentation/feature05.png) |
+| Field Position | The Field Position ensures that the game feels more realistic and diverse by informing the user, before each possession, about where the drive starts on the field. | ![screenshot](documentation/feature06.png) |
+| User Quarterback Decision Making | This feature is the main part of the game. The user acts as the quarterback and chooses between 3 plays in each turn. The outcome of these plays is left to chance, placing the user in new situations each time. | ![screenshot](documentation/feature07.png) |
+| End of Game Navigation | This feature ensures that when the game is over, the user is returned to the main menu, allowing them to start anew if they wish. | ![screenshot](documentation/feature08.png) |
 
 ### Future Features
 
