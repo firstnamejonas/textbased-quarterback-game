@@ -649,7 +649,7 @@ def end_game_navigation():
         welcome()
     else:
         print(
-            f"{user_choice_welcome_input} is an invalid input. "
+            f"{input_end_game_navigation} is an invalid input. "
             "Please choose again."
         )
         return end_game_navigation()
