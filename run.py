@@ -62,7 +62,7 @@ def game_rules():
     print("The coin toss will be your first decision ")
     print("and determines who gets the ball first. ")
     print("Then, you can decide how to play the ball.")
-    print("There are different options (numbers you can choose for each play),")
+    print("There are different options (numbers to choose for each play),")
     print(" and randomness determines what happens. ")
     print("You can score points or lose the ball.")
     print("The game ends after 7 possessions you had. ")
