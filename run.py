@@ -18,7 +18,7 @@ def welcome():
     Start of the game function
     """
     clear()
-    print('Welcome to the text-based adventure game "QB1".')
+    print(f'{Fore.WHITE}Welcome to the text-based adventure game "QB1".')
     print("In this game you are the quarterback of the New York Giants ")
     print("in the Super Bowl against the Kansas City Chiefs.")
     print("Make the right decisions and win the game of the year!\n")
@@ -31,26 +31,28 @@ def user_choice_welcome():
     """
     while True:
         print("Do you want to start the game or read the rules?")
-        print("1. Start the game")
-        print("2. Read the rules\n")
+        print(f"{Fore.YELLOW}1. {Fore.WHITE}Start the game")
+        print(f"{Fore.YELLOW}2. {Fore.WHITE}Read the rules\n")
 
-        user_choice_welcome_input = input("Your choice (1/2):\n")
+        user_choice_welcome_input = input(
+            f"{Fore.YELLOW}Your choice (1/2):\n"
+        )
         clear()
 
         if user_choice_welcome_input == "1":
-            print("Let the games begin...")
+            print(f"{Fore.WHITE}Let the games begin...")
             time.sleep(2)
             start_game()
             break
         elif user_choice_welcome_input == "2":
-            print("Here are the rules...")
+            print(f"{Fore.WHITE}Here are the rules...")
             time.sleep(2)
             game_rules()
             break
         else:
             print(
-                f"{user_choice_welcome_input} is an invalid input. "
-                "Please choose again."
+                f"{Fore.RED}{user_choice_welcome_input} "
+                "is an invalid input. Please choose again."
             )
 
 
@@ -77,7 +79,7 @@ def game_rules():
     print("TD: Touchdown")
     print("TE: Tight End")
     print("WR: Wide Receiver")
-    print("QB: Quarterback (Your position)")
+    print("QB: Quarterback (Your position)\n")
     game_rules_navigation()
 
 
@@ -89,13 +91,13 @@ def game_rules_navigation():
     while True:
         print("Do you want to start the game now ")
         print("or go back to the welcome menu?")
-        print("1. Start the game")
-        print("2. Welcome menu\n")
-        user_choice_rules = input("Your choice (1/2):\n")
+        print(f"{Fore.YELLOW}1. {Fore.WHITE}Start the game")
+        print(f"{Fore.YELLOW}2. {Fore.WHITE}Welcome menu\n")
+        user_choice_rules = input(f"{Fore.YELLOW}Your choice (1/2):\n")
         clear()
 
         if user_choice_rules == "1":
-            print("Let the games begin...")
+            print(f"{Fore.WHITE}Let the games begin...")
             time.sleep(2)
             start_game()
             break
@@ -104,7 +106,7 @@ def game_rules_navigation():
             break
         else:
             print(
-                f"{user_choice_rules} is an invalid input. "
+                f"{Fore.RED}{user_choice_rules} is an invalid input. "
                 "Please choose again."
             )
 
@@ -116,7 +118,10 @@ def start_game():
     """
     print("Welcome to the Super Bowl, ")
     print("the most prestigious sporting event of the year!")
-    print("--- New York Giants : Kansas City Chiefs ---")
+    print(
+        f"--- {Fore.BLUE}New York Giants {Fore.WHITE}: "
+        f"{Fore.RED}Kansas City Chiefs {Fore.WHITE}---"
+    )
     print("It's time for the game to begin, but who will get the ball first ")
     print("and the chance to score the first points?")
     print("It's your turn!\n")
@@ -129,17 +134,17 @@ def cointoss_start_game():
     """
     while True:
         print("\nDo you want to choose Heads or Tails?")
-        print("1. Heads")
-        print("2. Tails")
+        print(f"{Fore.YELLOW}1. {Fore.WHITE}Heads")
+        print(f"{Fore.YELLOW}2. {Fore.WHITE}Tails")
 
-        user_choice_cointoss = input("Your choice (1/2):\n")
+        user_choice_cointoss = input(f"{Fore.YELLOW}Your choice (1/2):\n")
         clear()
 
         if user_choice_cointoss in ("1", "2"):
             break
         else:
             print(
-                f"{user_choice_cointoss} is an invalid input. "
+                f"{Fore.RED}{user_choice_cointoss} is an invalid input. "
                 "Please choose again."
             )
 
@@ -147,11 +152,14 @@ def cointoss_start_game():
     result = str(num)
 
     if user_choice_cointoss == result:
-        print("Congrats! Your first win, now let's get started...")
+        print(f"{Fore.WHITE}Congrats! Your first win, now let's get started...")
         time.sleep(2)
         giants_possession()
     else:
-        print("Aw...You've lost the cointoss, but that means nothing!\n")
+        print(
+            f"{Fore.WHITE}Aw...You've lost the cointoss, "
+            "but that means nothing!\n"
+        )
         time.sleep(2)
         chiefs_posession()
 
@@ -171,8 +179,8 @@ def chiefs_posession():
 
     print("Current Score:")
     print(
-        f"--- New York Giants {giants_scored_point} : "
-        f"{chiefs_scored_points} Kansas City Chiefs ---"
+        f"--- {Fore.BLUE}New York Giants {Fore.WHITE}{giants_scored_point} : "
+        f"{chiefs_scored_points} {Fore.RED}Kansas City Chiefs {Fore.WHITE}---"
     )
     print("The Chiefs are in posession...\n")
     time.sleep(2)
@@ -209,8 +217,8 @@ def giants_possession():
 
     print("Current Score:")
     print(
-        f"--- New York Giants {giants_scored_point} : "
-        f"{chiefs_scored_points} Kansas City Chiefs ---"
+        f"--- {Fore.BLUE}New York Giants {Fore.WHITE}{giants_scored_point} : "
+        f"{chiefs_scored_points} {Fore.RED}Kansas City Chiefs {Fore.WHITE}---"
     )
     time.sleep(2)
 
@@ -242,16 +250,16 @@ def giants_posession_choose_play():
 
     while True:
         print("\nWhich play do you choose?")
-        print("1. Long Pass to WR")
-        print("2. Short Pass to WR")
-        print("3. Short Pass to TE")
+        print(f"{Fore.YELLOW}1. {Fore.WHITE}Long Pass to WR")
+        print(f"{Fore.YELLOW}2. {Fore.WHITE}Short Pass to WR")
+        print(f"{Fore.YELLOW}3. {Fore.WHITE}Short Pass to TE")
 
-        qb_choice = input("Your choice (1/2/3):\n")
+        qb_choice = input(f"{Fore.YELLOW}Your choice (1/2/3):\n")
         clear()
         if qb_choice in ["1", "2", "3"]:
             break
         else:
-            print(f"{qb_choice} isn't valid. Please try again!")
+            print(f"{Fore.RED}{qb_choice} isn't valid. Please try again!")
 
     if qb_choice == "1":
         if random.random() <= 0.2:
@@ -297,7 +305,7 @@ def giants_posession_choose_play():
                 giants_posession_choose_play()
         else:
             print("Completion! You achieved a new first down ")
-            print("and move further down the field!")
+            print(f"{Fore.YELLOW}and move further down the field!")
             # reset to zero with new first down
             consecutive_incomplete_pass = 0
             giants_posession_choose_play()
@@ -345,7 +353,7 @@ def giants_posession_choose_play():
                 giants_posession_choose_play()
         else:
             print("Completion! You achieved a new first down ")
-            print("and move further down the field!")
+            print(f"{Fore.YELLOW}and move further down the field!")
             # reset to zero with new first down
             consecutive_incomplete_pass = 0
             giants_posession_choose_play()
@@ -393,7 +401,7 @@ def giants_posession_choose_play():
                 giants_posession_choose_play()
         else:
             print("Completion! You achieved a new first down ")
-            print("and move further down the field!")
+            print(f"{Fore.YELLOW}and move further down the field!")
             # reset to zero with new first down
             consecutive_incomplete_pass = 0
             giants_posession_choose_play()
@@ -405,8 +413,8 @@ def end_game():
     """
     print("\nTHIS IS THE END!")
     print(
-        f"--- New York Giants {giants_scored_point} : "
-        f"{chiefs_scored_points} Kansas City Chiefs ---"
+        f"--- {Fore.BLUE}New York Giants {Fore.WHITE}{giants_scored_point} : "
+        f"{chiefs_scored_points} {Fore.RED}Kansas City Chiefs {Fore.WHITE}---"
     )
     if giants_scored_point > chiefs_scored_points:
         print("Congratulations! You win the Super Bowl! ")
@@ -483,9 +491,9 @@ def giants_posession_choose_play_overtime():
 
     while True:
         print("\nWhich play do you choose?")
-        print("1. Long Pass to WR")
-        print("2. Short Pass to WR")
-        print("3. Short Pass to TE")
+        print(f"{Fore.YELLOW}1. {Fore.WHITE}Long Pass to WR")
+        print(f"{Fore.YELLOW}2. {Fore.WHITE}Short Pass to WR")
+        print(f"{Fore.YELLOW}3. {Fore.WHITE}Short Pass to TE")
 
         qb_choice = input("Your choice (1/2/3):\n")
         clear()
@@ -504,7 +512,7 @@ def giants_posession_choose_play_overtime():
             chiefs_posession_overtime()
         elif random.random() <= 0.4:
             print("Congrats! You've scored a TOUCHDOWN!")
-            print("This is it! You've won the Super Bowl!")
+            print("\nThis is it! You've won the Super Bowl!")
             giants_scored_point += 7
             end_game_after_overtime()
         elif random.random() <= 0.6:
@@ -519,7 +527,7 @@ def giants_posession_choose_play_overtime():
                 giants_posession_choose_play_overtime()
         else:
             print("Completion! You achieved a new first down ")
-            print("and move further down the field!")
+            print(f"{Fore.YELLOW}and move further down the field!")
             # reset to zero with new first down
             consecutive_incomplete_pass_overtime = 0
             giants_posession_choose_play_overtime()
@@ -533,7 +541,7 @@ def giants_posession_choose_play_overtime():
             chiefs_posession_overtime()
         elif random.random() < 0.4:
             print("Congrats! You've scored a TOUCHDOWN!")
-            print("This is it! You've won the Super Bowl!")
+            print("\nThis is it! You've won the Super Bowl!")
             giants_scored_point += 7
             end_game_after_overtime()
         elif random.random() < 0.5:
@@ -548,7 +556,7 @@ def giants_posession_choose_play_overtime():
                 giants_posession_choose_play_overtime()
         else:
             print("Completion! You achieved a new first down ")
-            print("and move further down the field!")
+            print(f"{Fore.YELLOW}and move further down the field!")
             # reset to zero with new first down
             consecutive_incomplete_pass_overtime = 0
             giants_posession_choose_play_overtime()
@@ -562,7 +570,7 @@ def giants_posession_choose_play_overtime():
             chiefs_posession_overtime()
         elif random.random() < 0.4:
             print("Congrats! You've scored a TOUCHDOWN!")
-            print("This is it! You've won the Super Bowl!")
+            print("\nThis is it! You've won the Super Bowl!")
             giants_scored_point += 7
             end_game_after_overtime()
         elif random.random() < 0.5:
@@ -577,7 +585,7 @@ def giants_posession_choose_play_overtime():
                 giants_posession_choose_play_overtime()
         else:
             print("Completion! You achieved a new first down ")
-            print("and move further down the field!")
+            print(f"{Fore.YELLOW}and move further down the field!")
             # reset to zero with new first down
             consecutive_incomplete_pass_overtime = 0
             giants_posession_choose_play_overtime()
@@ -589,29 +597,33 @@ def coin_toss_overtime():
     """
     while True:
         print("\nDo you want to choose Heads or Tails?")
-        print("1. Heads")
-        print("2. Tails")
+        print(f"{Fore.YELLOW}1. {Fore.WHITE}Heads")
+        print(f"{Fore.YELLOW}2. {Fore.WHITE}Tails")
 
-        user_choice_cointoss_overtime = input("Your choice (1/2):\n")
+        user_choice_cointoss_overtime = input(
+            f"{Fore.YELLOW}Your choice (1/2):\n"
+        )
         clear()
 
         if user_choice_cointoss_overtime in ("1", "2"):
             break
         else:
             print(
-                f"{user_choice_cointoss_overtime} is an invalid input. "
-                "Please choose again."
+                f"{Fore.RED}{user_choice_cointoss_overtime} "
+                "is an invalid input. Please choose again."
             )
 
     num_overtime = random.randint(1, 2)
     result = str(num_overtime)
 
     if user_choice_cointoss_overtime == result:
-        print("Congrats! You win, you get the ball to start the overtime!\n")
+        print(
+            f"{Fore.WHITE}Congrats! "
+            "You win, you get the ball to start the overtime!\n")
         giants_possession_overtime()
         time.sleep(2)
     else:
-        print("Aw...You've lost the cointoss!\n")
+        print(f"{Fore.WHITE}Aw...You've lost the cointoss!\n")
         print("The Chiefs are taking over to start the overtime...\n")
         time.sleep(2)
         chiefs_posession_overtime()
@@ -623,8 +635,8 @@ def end_game_after_overtime():
     """
     print("\nTHIS IS THE END!")
     print(
-        f"--- New York Giants {giants_scored_point} : "
-        f"{chiefs_scored_points} Kansas City Chiefs ---"
+        f"--- {Fore.BLUE}New York Giants {Fore.WHITE}{giants_scored_point} : "
+        f"{chiefs_scored_points} {Fore.RED}Kansas City Chiefs {Fore.WHITE}---"
     )
     if giants_scored_point > chiefs_scored_points:
         print("Congratulations! You win the Super Bowl! ")
@@ -653,7 +665,9 @@ def end_game_navigation():
     global consecutive_incomplete_pass_overtime
 
     print("Head back to the main menu and end this game!")
-    input_end_game_navigation = input("Hit ENTER to end game")
+    input_end_game_navigation = input(
+        f"Hit {Fore.YELLOW}ENTER {Fore.WHITE}to end game"
+    )
     clear()
 
     print("See you next time!\n")
