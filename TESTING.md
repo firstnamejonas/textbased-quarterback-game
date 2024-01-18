@@ -64,6 +64,7 @@ Defensive programming was manually tested with the below user acceptance testing
 |The terminal gave an error message when trying to implement the scoreboard so that it is displayed before each team possession. | ![screenshot](documentation/bug02_terminal.png) ![screenshot](documentation/bug02_code.png) | To fix this, I have specified the variables as global in the function, so that the function knows what it has to access. | ![screenshot](documentation/bug02_solution.png) |
 | Since it's the Super Bowl, the game can't end in a tie like the picture below. | ![screenshot](documentation/bug03_draw.png) | To fix this, I have added functions, that are displaying an overtime, with the first team to score winning the game. | ![screenshot](documentation/bug03_draw_solution.png) |
 | If the user decides to restart the game after finishing it, the variables still had values saved from the previous game and the score was not reset to 0 : 0, for example. | ![screenshot](documentation/bug04.png) | To fix this, I have add resets to the end_game_navigation function for the necessary variables. | ![screenshot](documentation/bug04_solution.png) |
+| Python Validation Error: E501 line too long (103 > 79 characters). Lines: 164, 199, 392, 607 | ![screenshot](documentation/py-validation-run.png) | Fixed it by splitting the code up into multiple lines. | ![screenshot](documentation/bug05_solution.png) |
 
 
 ## Unfixed Bugs
