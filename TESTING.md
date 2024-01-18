@@ -13,7 +13,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| run.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/firstnamejonas/textbased-quarterback-game/main/run.py) | ![screenshot](documentation/py-validation-run.png) | Click here for [Unfixed Bugs](#unfixed-bugs)!|
+| run.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/firstnamejonas/textbased-quarterback-game/main/run.py) | ![screenshot](documentation/py-validation-run.png) | All clear, no errors found. |
 
 
 ## Browser Compatibility
