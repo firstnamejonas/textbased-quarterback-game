@@ -616,7 +616,7 @@ def end_game_after_overtime():
         print("Better luck next time!\n")
         time.sleep(2)
         print("This is the end of the game...")
-        print("I hope you had as much fun playing it as i had programming it!")
+        print("I hope you had as much fun playing it as I had programming it!")
 
     end_game_navigation()
 
@@ -631,28 +631,20 @@ def end_game_navigation():
     global consecutive_incomplete_pass
     global consecutive_incomplete_pass_overtime
 
-    print("Head back to the main menu and end this game ")
-    print('by clicking "1" on your keyboard?')
-
-    input_end_game_navigation = input("Press (1):\n")
+    print("Head back to the main menu and end this game!")
+    input_end_game_navigation = input("Hit ENTER to end game")
     clear()
+    
+    print("See you next time!\n")
+    time.sleep(2)
 
-    if input_end_game_navigation == "1":
-        print("See you next time!\n")
-        time.sleep(2)
-        # reset everything to 0 in case the user plays again!
-        giants_scored_point = 0
-        chiefs_scored_points = 0
-        user_possession_counter = 0
-        consecutive_incomplete_pass = 0
-        consecutive_incomplete_pass_overtime = 0
-        welcome()
-    else:
-        print(
-            f"{input_end_game_navigation} is an invalid input. "
-            "Please choose again."
-        )
-        return end_game_navigation()
+    # reset everything to 0 in case the user plays again!
+    giants_scored_point = 0
+    chiefs_scored_points = 0
+    user_possession_counter = 0
+    consecutive_incomplete_pass = 0
+    consecutive_incomplete_pass_overtime = 0
+    welcome()
 
 
 welcome()
