@@ -1,6 +1,9 @@
 import os
 import time
 import random
+import colorama
+from colorama import Fore, Back, Style
+colorama.init(autoreset=True)
 
 
 def clear():
