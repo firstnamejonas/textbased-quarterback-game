@@ -498,12 +498,12 @@ def giants_posession_choose_play_overtime():
         print(f"{Fore.YELLOW}2. {Fore.WHITE}Short Pass to WR")
         print(f"{Fore.YELLOW}3. {Fore.WHITE}Short Pass to TE")
 
-        qb_choice = input("Your choice (1/2/3):\n")
+        qb_choice = input(f"{Fore.YELLOW}Your choice (1/2/3):\n")
         clear()
         if qb_choice in ["1", "2", "3"]:
             break
         else:
-            print(f"{qb_choice} isn't valid. Please try again!")
+            print(f"{Fore.RED}{qb_choice} isn't valid. Please try again!")
 
     if qb_choice == "1":
         if random.random() <= 0.2:
