@@ -167,7 +167,10 @@ def chiefs_posession():
     global giants_scored_point
 
     print("Current Score:")
-    print(f"--- New York Giants {giants_scored_point} : {chiefs_scored_points} Kansas City Chiefs ---")
+    print(
+        f"--- New York Giants {giants_scored_point} : "
+        f"{chiefs_scored_points} Kansas City Chiefs ---"
+    )
     print("The Chiefs are in posession...\n")
     time.sleep(2)
     if random.random() < 0.5:
@@ -202,7 +205,10 @@ def giants_possession():
     user_possession_counter += 1
 
     print("Current Score:")
-    print(f"--- New York Giants {giants_scored_point} : {chiefs_scored_points} Kansas City Chiefs ---")
+    print(
+        f"--- New York Giants {giants_scored_point} : "
+        f"{chiefs_scored_points} Kansas City Chiefs ---"
+    )
     time.sleep(2)
 
     if user_possession_counter == 7:
@@ -395,7 +401,10 @@ def end_game():
     Function for the end of the game.
     """
     print("\nTHIS IS THE END!")
-    print(f"Final Score: New York Giants {giants_scored_point} : {chiefs_scored_points} Kansas City Chiefs")
+    print(
+        f"--- New York Giants {giants_scored_point} : "
+        f"{chiefs_scored_points} Kansas City Chiefs ---"
+    )
     if giants_scored_point > chiefs_scored_points:
         print("Congratulations! You win the Super Bowl! ")
         print("You are a world champion!\n")
@@ -610,7 +619,10 @@ def end_game_after_overtime():
     Function to end the game after overtime.
     """
     print("\nTHIS IS THE END!")
-    print(f"Final Score: New York Giants {giants_scored_point} : {chiefs_scored_points} Kansas City Chiefs")
+    print(
+        f"--- New York Giants {giants_scored_point} : "
+        f"{chiefs_scored_points} Kansas City Chiefs ---"
+    )
     if giants_scored_point > chiefs_scored_points:
         print("Congratulations! You win the Super Bowl! ")
         print("You are a world champion!\n")
