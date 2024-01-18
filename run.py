@@ -634,7 +634,7 @@ def end_game_navigation():
     print("Head back to the main menu and end this game!")
     input_end_game_navigation = input("Hit ENTER to end game")
     clear()
-    
+
     print("See you next time!\n")
     time.sleep(2)
 
@@ -647,4 +647,9 @@ def end_game_navigation():
     welcome()
 
 
-welcome()
+if __name__ == "__main__":
+    """
+    Initialise the app.
+    """
+    clear()
+    welcome()
