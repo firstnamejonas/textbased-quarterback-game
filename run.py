@@ -272,7 +272,7 @@ def giants_posession_choose_play():
                 print("OH NOOOO! You're pass has been intercepted! ")
                 print("Now the Chiefs have the ball!")
                 print("Keep ypur head up! Take a breather ")
-                print("and come back stronger after their posession!")
+                print("and come back stronger after their posession!\n")
                 time.sleep(2)
                 chiefs_posession()
         elif random.random() <= 0.4:
@@ -320,7 +320,7 @@ def giants_posession_choose_play():
                 print("OH NOOOO! You're pass has been intercepted! ")
                 print("Now the Chiefs have the ball!")
                 print("Keep ypur head up! Take a breather ")
-                print("and come back stronger after their posession!")
+                print("and come back stronger after their posession!\n")
                 time.sleep(2)
                 chiefs_posession()
         elif random.random() <= 0.4:
@@ -368,7 +368,7 @@ def giants_posession_choose_play():
                 print("OH NOOOO! You're pass has been intercepted! ")
                 print("Now the Chiefs have the ball!")
                 print("Keep ypur head up! Take a breather ")
-                print("and come back stronger after their posession!")
+                print("and come back stronger after their posession!\n")
                 time.sleep(2)
                 chiefs_posession()
         elif random.random() <= 0.4:
@@ -507,7 +507,7 @@ def giants_posession_choose_play_overtime():
             print("OH NOOOO! You're pass has been intercepted! ")
             print("Now the Chiefs have the ball!")
             print("Keep ypur head up! Take a breather ")
-            print("and come back stronger after their posession!")
+            print("and come back stronger after their posession!\n")
             time.sleep(2)
             chiefs_posession_overtime()
         elif random.random() <= 0.4:
@@ -536,7 +536,7 @@ def giants_posession_choose_play_overtime():
             print("OH NOOOO! You're pass has been intercepted! ")
             print("Now the Chiefs have the ball!")
             print("Keep ypur head up! Take a breather ")
-            print("and come back stronger after their posession!")
+            print("and come back stronger after their posession!\n")
             time.sleep(2)
             chiefs_posession_overtime()
         elif random.random() < 0.4:
@@ -565,7 +565,7 @@ def giants_posession_choose_play_overtime():
             print("OH NOOOO! You're pass has been intercepted! ")
             print("Now the Chiefs have the ball!")
             print("Keep ypur head up! Take a breather ")
-            print("and come back stronger after their posession!")
+            print("and come back stronger after their posession!\n")
             time.sleep(2)
             chiefs_posession_overtime()
         elif random.random() < 0.4:
