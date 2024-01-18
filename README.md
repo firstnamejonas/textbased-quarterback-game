@@ -49,6 +49,7 @@ QB1 is not just a game; it's an experience crafted with your enjoyment in mind. 
 
 - Implement game history and statistics to track progress for returning site users.
 - A chance to select between several teams to play with.
+- Resolve field position inconsistency for users starting at the opponent's territory; ensure accurate touchdown calculations after gaining multiple first downs. ([Read more in TESTING.md - Unfixed Bugs](TESTING.md#unfixed-bugs))
 
 
 ## Tools & Technologies Used
