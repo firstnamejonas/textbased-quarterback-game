@@ -65,10 +65,16 @@ def game_rules():
     print("There are different options (numbers to choose for each play),")
     print(" and randomness determines what happens. ")
     print("You can score points or lose the ball.")
+    print("NOTE: If you score a TD you'll automatically score 7 points")
     print("The game ends after 7 possessions you had. ")
     print("The one with more points wins the Super Bowl!")
     print("If the game is tied after 7 possessions there will be an overtime,")
     print("which will again start with a cointoss!\n")
+    print("Explanation of abbreviations:")
+    print("TD: Touchdown")
+    print("TE: Tight End")
+    print("WR: Wide Receiver")
+    print("QB: Quarterback (Your position)")
     game_rules_navigation()
 
 
