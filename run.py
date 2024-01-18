@@ -152,7 +152,10 @@ def cointoss_start_game():
     result = str(num)
 
     if user_choice_cointoss == result:
-        print(f"{Fore.WHITE}Congrats! Your first win, now let's get started...")
+        print(
+            f"{Fore.WHITE}Congrats! "
+            "Your first win, now let's get started..."
+        )
         time.sleep(2)
         giants_possession()
     else:
