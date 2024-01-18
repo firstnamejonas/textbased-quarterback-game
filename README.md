@@ -98,6 +98,7 @@ I've used the following Python packages and/or external imported packages.
 - `time`: used for delayed responses for better user overview
 - `random`: used for random scenario outcomes in the game
 - `os`: used to clear the screen for better user overview
+- `colorama`: used to highlight text for better user overview
 
 
 ## Testing
@@ -206,6 +207,7 @@ The local version may have additional debug features enabled for testing purpose
 | --- | --- |
 | [W3Schools](https://www.w3schools.com) | for various tutorials on Python |
 | [YouTube](https://www.youtube.com) | for tutorials on game development concepts. |
+| [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | for tutorials on how to use and implement colorama. |
 | [WikiHow](https://www.wikihow.com/Write-a-Coin-Flipping-Program-on-Python) | for tutorial on how to implement the cointoss into the game |
 | [DigitalOcean](https://www.digitalocean.com/community/tutorials/python-time-sleep) | for time.sleep() function to hold back responses for a better user overview |
 | [StackOverflow](https://stackoverflow.com/questions/46820182/randomly-generate-1-or-1-positive-or-negative-integer) | for implementation of randomly generated scenario outcome |
