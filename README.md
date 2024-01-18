@@ -66,7 +66,7 @@ QB1 is not just a game; it's an experience crafted with your enjoyment in mind. 
 
 ![screenshot](documentation/flowchart.png)
 
-### Classes & Functions
+### Functions
 
 The primary functions used on this application are:
 
@@ -96,6 +96,7 @@ I've used the following Python packages and/or external imported packages.
 
 - `time`: used for delayed responses for better user overview
 - `random`: used for random scenario outcomes in the game
+- `os`: used to clear the screen for better user overview
 
 
 ## Testing
@@ -119,7 +120,6 @@ Deployment steps are as follows, after account setup:
 - Select **New** in the top-right corner of your Heroku Dashboard, and select **Create new app** from the dropdown menu.
 - Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select **Create App**.
 - From the new app **Settings**, click **Reveal Config Vars**, and set the value of KEY to `PORT`, and the value to `8000` then select *add*.
-- If using any confidential credentials, such as CREDS.JSON, then these should be pasted in the Config Variables as well.
 - Further down, to support dependencies, select **Add Buildpack**.
 - The order of the buildpacks is important, select `Python` first, then `Node.js` second. (if they are not in this order, you can drag them to rearrange them)
 
@@ -162,8 +162,6 @@ This project can be cloned or forked in order to make a local copy on your own s
 For either method, you will need to install any applicable packages found within the *requirements.txt* file.
 
 - `pip3 install -r requirements.txt`.
-
-If using any confidential credentials, such as `CREDS.json` or `env.py` data, these will need to be manually added to your own newly created project as well.
 
 #### Cloning
 
