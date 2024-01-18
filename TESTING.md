@@ -69,10 +69,10 @@ Defensive programming was manually tested with the below user acceptance testing
 
 ## Unfixed Bugs
 
-Python Validation Error: E501 line too long (103 > 79 characters).
-Lines: 164, 199, 392, 607
-- I haven't fixed these bugs because they don't affect the game's visibility. However, if I were to change these bugs, it would lead to a poorer user experience
+One notable aspect of the game is the presentation of the field position before each possession in this text-based quarterback simulation. It adds realism to the game, providing users with an understanding of their position on the field.
 
-    ![screenshot](documentation/unfixed_bugs01.png)
+However, there is an unresolved issue. Currently, if the user starts at the opponent's 34-yard line, for instance, and successfully gains four new first downs, it should logically result in a touchdown. Regrettably, this functionality is currently not implemented.
+
+This issue will be addressed and fixed in future feature updates. To stay informed about upcoming features and improvements, please refer to the Future Features section in the here: [README.md - Future Features](README.md#future-features).
 
 There are no remaining bugs that I am aware of.
