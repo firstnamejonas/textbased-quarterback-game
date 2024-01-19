@@ -61,7 +61,7 @@ def game_rules():
     Functions to display rules and let user decide if he wants
     do get back to menu or start game directly (navigation function)
     """
-    print("\nGame Rules:")
+    print("Game Rules:")
     print("You as the Quarterback must make crucial decisions for your team")
     print("From the cointoss to offensive play calling - YOU DECIDE!")
     print("There are different options (numbers to choose) for each play.")
