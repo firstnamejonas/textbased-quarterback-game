@@ -62,24 +62,18 @@ def game_rules():
     do get back to menu or start game directly (navigation function)
     """
     print("\nGame Rules:")
-    print("You are the QB of your team ")
-    print("and must make crucial decisions to win the game.")
-    print("The coin toss will be your first decision ")
-    print("and determines who gets the ball first. ")
-    print("Then, you can decide how to play the ball.")
-    print("There are different options (numbers to choose for each play),")
-    print(" and randomness determines what happens. ")
-    print("You can score points or lose the ball.")
-    print("NOTE: If you score a TD you'll automatically score 7 points")
-    print("The game ends after 7 possessions you had. ")
-    print("The one with more points wins the Super Bowl!")
-    print("If the game is tied after 7 possessions there will be an overtime,")
-    print("which will again start with a cointoss!\n")
+    print("You as the Quarterback must make crucial decisions for your team")
+    print("From the cointoss to offensive play calling - YOU DECIDE!")
+    print("There are different options (numbers to choose) for each play.")
+    print("Randomness decides the outcome, from Touchdowns to Interceptions.")
+    print("NOTE: If you score a TD you'll automatically score +7 points")
+    print("The game ends after 7 possessions you had.")
+    print("The team with more points wins the Super Bowl!")
+    print("If the game's tied after 7 possessions it will go into overtime!")
+    print("Whoever scores first in overtime wins it all!\n")
     print("Explanation of abbreviations:")
     print("TD: Touchdown")
-    print("TE: Tight End")
-    print("WR: Wide Receiver")
-    print("QB: Quarterback (Your position)\n")
+    print("Positions: QB (Quarterback), TE (Tight End), WR (Wide Receiver)\n")
     game_rules_navigation()
 
 
@@ -89,7 +83,7 @@ def game_rules_navigation():
     start the game while in the rules.
     """
     while True:
-        print("Do you want to start the game now ")
+        print("Do you want to start the game now")
         print("or go back to the welcome menu?")
         print(f"{Fore.YELLOW}1. {Fore.WHITE}Start the game")
         print(f"{Fore.YELLOW}2. {Fore.WHITE}Welcome menu\n")
