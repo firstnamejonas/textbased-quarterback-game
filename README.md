@@ -205,6 +205,8 @@ The local version may have additional debug features enabled for testing purpose
 
 | Source | Usage |
 | --- | --- |
+| [UI.dev](https://ui.dev/amiresponsive?url=https://textbased-quarterback-game-fcaaa3679ab0.herokuapp.com/) | Mockup of my website |
+| [Lucidchart](https://www.lucidchart.com/pages/) | Flowchart for the README.md |
 | [W3Schools](https://www.w3schools.com) | for various tutorials on Python |
 | [YouTube](https://www.youtube.com) | for tutorials on game development concepts. |
 | [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | for tutorials on how to use and implement colorama. |
